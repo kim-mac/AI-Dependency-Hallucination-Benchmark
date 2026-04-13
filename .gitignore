@@ -1,0 +1,44 @@
+# Node / JS
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.npm/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Logs and temp
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+tmp/
+temp/
+
+# Generated benchmark artifacts (large / local)
+analysis/transcripts/
+analysis/workspace_snapshots/
+analysis/grading_results.json
+analysis/summary.json
+
+# Dashboard generated state
+dashboard/dist/
+dashboard/config/job_log.json

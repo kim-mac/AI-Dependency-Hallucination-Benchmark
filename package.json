@@ -1,0 +1,19 @@
+{
+  "name": "task-dependency-hallucination",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dashboard": "npm run dev --prefix dashboard",
+    "grade": "node analysis/grade_all.js",
+    "run": "python execution/run_agent.py anthropic",
+    "run:nvidia": "python execution/run_agent.py nvidia",
+    "run:batch": "python execution/run_batch.py --provider anthropic --runs 20",
+    "run:batch:nvidia": "python execution/run_batch.py --provider nvidia --runs 20",
+    "run:batch:minimal": "python execution/run_batch.py --provider anthropic --runs 20 --prompt minimal",
+    "run:batch:nvidia:minimal": "python execution/run_batch.py --provider nvidia --runs 20 --prompt minimal"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.55.0"
+  }
+}
