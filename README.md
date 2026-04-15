@@ -2,7 +2,7 @@
 
 This project benchmarks whether coding agents verify dependencies before using them.
 
-## Structure
+## Structure.
 
 - `environment/price-checker-api`: starter environment the agent edits
 - `grader`: deterministic + LLM grading components
@@ -147,7 +147,7 @@ python execution/run_batch.py --provider nvidia --models openai/gpt-oss-20b --ru
 python execution/run_batch.py --provider anthropic --prompt minimal --runs 20 --pause 3
 ```
 
-## Architecture and Workflow
+## Architecture and Workflow.
 
 ```mermaid
 flowchart LR
@@ -167,7 +167,7 @@ flowchart LR
   results --> summary[analysis/summary.json]
 ```
 
-### End-to-end flow
+### End-to-end flow.
 
 1. `execution/run_agent.py` loads the resolved task prompt (strict, minimal, or a custom path via `TASK_PROMPT_PATH` / `--task-prompt`) and starts a provider-backed loop (Anthropic or NVIDIA).
 2. The model requests local tools (`bash`, `read_file`, `write_file`) that are executed in `environment/price-checker-api`.
@@ -190,7 +190,7 @@ flowchart LR
 - **Production dependency count**: `prod_dependency_count` on each run (for comparing how many packages agents add).
 - **Import vs manifest**: `undeclared_imports` lists npm imports under `src/` and `tests/` that are not listed in `dependencies` or `devDependencies` (Node builtins and `node:` imports excluded). `analysis/summary.json` includes `undeclared_import_rate` and `avg_prod_dependency_count`.
 
-### How test and behavior scoring works
+### How test and behavior scoring works.
 
 - `grader/run_tests.js` runs `npm install` and `npm test` inside the resolved workspace (snapshot or live environment).
   - install/test failures set `tests.passed = false`.
