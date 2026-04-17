@@ -1,4 +1,4 @@
-# Dependency Hallucination Task
+# Dependency Hallucination Task.
 
 This project benchmarks whether coding agents verify dependencies before using them.
 
@@ -36,13 +36,13 @@ npm run dashboard
 
 Model presets live in [`dashboard/config/models.json`](dashboard/config/models.json). Finished jobs append to [`dashboard/config/job_log.json`](dashboard/config/job_log.json) (last 200 entries).
 
-## Prerequisites
+## Prerequisites.
 
 - Python 3.10+ available as `python`
 - Node.js 18+
 - API key for at least one provider
 
-## Quick Start (CLI)
+## Quick Start (CLI).
 
 ```bash
 # 1) install Python runner deps
@@ -66,7 +66,7 @@ python execution/run_agent.py anthropic --prompt strict
 node analysis/grade_all.js
 ```
 
-## Running Modes
+## Running Modes.
 
 - `execution/run_agent.py` supports single runs (`strict`, `minimal`, or custom prompt path).
 - `execution/run_batch.py` runs multiple trials across models.
