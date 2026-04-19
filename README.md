@@ -74,13 +74,13 @@ node analysis/grade_all.js
 
 This project measures a practical production risk in agent-assisted development: **dependency reliability failures** (hallucinated package choices, invalid versions, deprecated packages, and undeclared imports that break install/test flows).
 
-### Risk measured
+### Risk measured.
 
 - Package reliability issues: non-existent or incorrect dependencies, invalid semver ranges, deprecated dependencies
 - Implementation reliability gaps: imports not reflected in `package.json`, failing install/test runs
 - Behavior differences under prompt policy: strict vs minimal dependency-verification instructions
 
-### Key insights
+### Key insights.
 
 - Strong models can still produce risky dependency outcomes under repeated runs, especially around version validity and consistency between code imports and declared dependencies.
 - Prompt framing changes behavior: strict prompts test compliance, minimal prompts test spontaneous package-selection quality.
